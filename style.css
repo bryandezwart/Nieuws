@@ -1,0 +1,354 @@
+:root {
+    --rm-orange: #F28C18;
+    --rm-orange-dark: #CF7000;
+    --rm-orange-soft: #FFB75C;
+    --rm-bg: #07111D;
+    --rm-bg-2: #0B1829;
+    --rm-panel: rgba(14, 24, 39, 0.92);
+    --rm-panel-2: rgba(18, 31, 49, 0.94);
+    --rm-border: rgba(255, 187, 92, 0.22);
+    --rm-text: #F8FAFD;
+    --rm-muted: #B8C3D2;
+    --rm-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+    --rm-gray-surface: rgb(169,169,169);
+    --rm-gray-surface-2: rgb(149,149,149);
+}
+
+.stApp {
+    color: var(--rm-text);
+    background:
+        radial-gradient(circle at top right, rgba(242, 140, 24, 0.08), transparent 24%),
+        linear-gradient(180deg, #06101B 0%, #081421 44%, #0B1829 100%);
+}
+
+#MainMenu, footer, header[data-testid="stHeader"] { visibility: hidden; }
+.block-container { max-width: 1320px; padding-top: 1.2rem; padding-bottom: 2rem; }
+
+h1, h2, h3, h4, h5, h6, p, label, span, div, li { color: var(--rm-text); }
+
+.rm-hero {
+    border: 1px solid var(--rm-border);
+    border-radius: 28px;
+    padding: 1.45rem 1.6rem;
+    background:
+        radial-gradient(circle at top right, rgba(242, 140, 24, 0.10), transparent 28%),
+        linear-gradient(145deg, rgba(17, 30, 48, 0.96) 0%, rgba(10, 21, 36, 0.98) 100%);
+    box-shadow: var(--rm-shadow);
+    margin-bottom: 1rem;
+}
+
+.rm-title {
+    font-size: 2.3rem;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.rm-subtitle {
+    color: var(--rm-orange);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 0.45rem;
+    margin-bottom: 0.5rem;
+}
+
+.rm-badges, .rm-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 0.8rem;
+}
+
+.rm-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.42rem 0.78rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--rm-text);
+    border: 1px solid var(--rm-border);
+    background: rgba(255,255,255,0.04);
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.rm-section-intro {
+    color: var(--rm-muted);
+    margin: 0.1rem 0 0.95rem 0;
+    font-size: 0.96rem;
+    line-height: 1.35;
+}
+
+.rm-subheader {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.14rem;
+    font-weight: 800;
+    margin-bottom: 0.18rem;
+}
+
+div[data-baseweb="tab-list"] { gap: 0.65rem; margin-bottom: 0.8rem; }
+
+button[role="tab"] {
+    border-radius: 18px !important;
+    border: 1px solid var(--rm-border) !important;
+    background: rgba(19, 33, 53, 0.92) !important;
+    color: var(--rm-text) !important;
+    padding: 0.75rem 1.05rem !important;
+    font-weight: 800 !important;
+}
+
+button[role="tab"][aria-selected="true"] {
+    background: linear-gradient(180deg, var(--rm-orange-soft) 0%, var(--rm-orange) 48%, var(--rm-orange-dark) 100%) !important;
+    color: #181818 !important;
+    border-color: rgba(255,255,255,0.16) !important;
+    box-shadow: 0 10px 24px rgba(242, 140, 24, 0.22) !important;
+}
+
+div[data-testid="stMetric"] {
+    background: linear-gradient(180deg, rgba(18, 31, 49, 0.95) 0%, rgba(11, 22, 38, 0.95) 100%);
+    border: 1px solid var(--rm-border);
+    border-radius: 24px;
+    padding: 0.9rem 1rem;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+div[data-testid="stMetricLabel"] > div { color: var(--rm-muted) !important; font-weight: 600 !important; }
+div[data-testid="stMetricValue"] { font-weight: 800 !important; }
+
+.stButton > button, .stDownloadButton > button {
+    width: 100% !important;
+    min-height: 3.1rem !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(255,255,255,0.16) !important;
+    background: linear-gradient(180deg, var(--rm-orange-soft) 0%, var(--rm-orange) 40%, var(--rm-orange-dark) 100%) !important;
+    color: #171717 !important;
+    font-weight: 800 !important;
+    font-size: 0.88rem !important;
+    white-space: normal !important;
+    line-height: 1.15 !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.25),
+        0 10px 24px rgba(242, 140, 24, 0.22) !important;
+}
+
+.stButton > button:hover, .stDownloadButton > button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+}
+
+.stButton > button p, .stDownloadButton > button p,
+.stButton > button span, .stDownloadButton > button span {
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    text-align: center !important;
+}
+
+.stCheckbox label, .stRadio label, .stSlider label,
+.stDateInput label, .stTextInput label, .stSelectbox label {
+    font-weight: 700 !important;
+    color: var(--rm-text) !important;
+}
+
+div[data-baseweb="input"] > div,
+.stDateInput > div > div,
+.stTextInput > div > div {
+    background: rgba(15, 26, 43, 0.92) !important;
+    border: 1px solid var(--rm-border) !important;
+    border-radius: 16px !important;
+    color: var(--rm-text) !important;
+}
+
+.stTextArea textarea {
+    background: rgba(10, 18, 31, 0.96) !important;
+    color: var(--rm-text) !important;
+    border: 1px solid var(--rm-border) !important;
+    border-radius: 16px !important;
+}
+
+/* Orange controls */
+input[type="checkbox"], input[type="radio"] { accent-color: var(--rm-orange) !important; }
+
+.stSlider [data-baseweb="slider"] div[role="slider"] {
+    background: var(--rm-orange) !important;
+    border-color: var(--rm-orange) !important;
+    box-shadow: 0 0 0 2px rgba(242, 140, 24, 0.16) !important;
+}
+
+.stSlider [data-baseweb="slider"] > div > div:first-child,
+.stSlider [data-baseweb="slider"] > div > div > div {
+    background: var(--rm-orange) !important;
+}
+
+div[data-baseweb="checkbox"] div[aria-checked="true"],
+div[data-baseweb="checkbox"] div[data-checked="true"],
+.stCheckbox div[aria-checked="true"],
+.stCheckbox div[data-checked="true"],
+div[role="checkbox"][aria-checked="true"] {
+    background-color: var(--rm-orange) !important;
+    border-color: var(--rm-orange) !important;
+    box-shadow: 0 0 0 1px rgba(242,140,24,0.18) !important;
+}
+
+div[data-baseweb="checkbox"] svg, .stCheckbox svg, div[role="checkbox"] svg {
+    fill: #171717 !important;
+    color: #171717 !important;
+}
+
+div[data-baseweb="radio"] div[aria-checked="true"],
+div[data-baseweb="radio"] div[data-checked="true"],
+.stRadio div[aria-checked="true"],
+.stRadio div[data-checked="true"],
+div[role="radio"][aria-checked="true"] {
+    background-color: var(--rm-orange) !important;
+    border-color: var(--rm-orange) !important;
+}
+
+/* White/bright surfaces -> gray (#696969), including calendar */
+div[data-testid="stDataFrame"],
+div[data-testid="stDataFrame"] [role="grid"],
+div[data-testid="stDataFrame"] [data-testid="stDataFrameResizable"],
+div[data-testid="stDataFrame"] table,
+div[data-testid="stDataFrame"] thead,
+div[data-testid="stDataFrame"] tbody,
+div[data-testid="stDataFrame"] tr,
+div[data-testid="stDataFrame"] th,
+div[data-testid="stDataFrame"] td {
+    background: var(--rm-gray-surface) !important;
+    color: var(--rm-text) !important;
+    border-color: rgba(255, 187, 92, 0.18) !important;
+}
+
+div[data-testid="stDataFrame"] th {
+    background: var(--rm-gray-surface-2) !important;
+}
+
+div[data-baseweb="calendar"],
+div[data-baseweb="calendar"] *,
+div[role="dialog"],
+div[role="dialog"] *,
+div[role="listbox"],
+div[role="listbox"] * {
+    background-color: var(--rm-gray-surface) !important;
+    color: var(--rm-text) !important;
+    border-color: rgba(255, 187, 92, 0.22) !important;
+}
+
+div[data-baseweb="calendar"] button:hover,
+div[role="dialog"] [data-baseweb="calendar"] button:hover,
+div[role="dialog"] button:hover,
+div[role="listbox"] button:hover {
+    background: var(--rm-gray-surface-2) !important;
+    border-color: rgba(242,140,24,0.55) !important;
+}
+
+div[data-baseweb="calendar"] button[aria-selected="true"],
+div[data-baseweb="calendar"] button[aria-pressed="true"],
+div[data-baseweb="calendar"] [aria-current="date"],
+div[role="dialog"] [data-baseweb="calendar"] button[aria-selected="true"],
+div[role="dialog"] [data-baseweb="calendar"] button[aria-pressed="true"],
+div[role="dialog"] [data-baseweb="calendar"] [aria-current="date"],
+div[role="dialog"] button[aria-selected="true"],
+div[role="dialog"] button[aria-pressed="true"],
+div[role="dialog"] [aria-current="date"] {
+    background: var(--rm-orange) !important;
+    color: #171717 !important;
+    border-color: var(--rm-orange) !important;
+    box-shadow: 0 0 0 1px rgba(242,140,24,0.20) !important;
+}
+
+*:focus, *:focus-visible {
+    outline-color: rgba(242, 140, 24, 0.55) !important;
+}
+
+div[data-testid="stDataFrame"] {
+    border: 1px solid var(--rm-border);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+}
+
+div[data-testid="stExpander"] {
+    border: 1px solid var(--rm-border);
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(16, 28, 45, 0.90) 0%, rgba(10, 20, 35, 0.96) 100%);
+    overflow: hidden;
+}
+
+div[data-testid="stExpander"] summary { font-weight: 800 !important; }
+
+a { color: var(--rm-orange-soft) !important; font-weight: 700; }
+hr { border-color: var(--rm-border); }
+
+/* gray surfaces */
+.rm-table-wrap {
+    background: rgb(169,169,169) !important;
+    border: 1px solid rgba(255, 187, 92, 0.18);
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 0.25rem 0 0.8rem 0;
+}
+
+.rm-html-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgb(169,169,169) !important;
+    color: #F8FAFD !important;
+    font-size: 0.95rem;
+}
+
+.rm-html-table thead tr,
+.rm-html-table tbody tr,
+.rm-html-table th,
+.rm-html-table td {
+    background: rgb(169,169,169) !important;
+    color: #F8FAFD !important;
+    border-color: rgba(0,0,0,0.12) !important;
+}
+
+.rm-html-table th {
+    background: rgb(149,149,149) !important;
+    text-align: left;
+    padding: 0.8rem 0.7rem;
+    font-weight: 800;
+}
+
+.rm-html-table td {
+    padding: 0.75rem 0.7rem;
+    border-top: 1px solid rgba(0,0,0,0.10);
+}
+
+input[type="checkbox"], input[type="radio"] {
+    accent-color: #F28C18 !important;
+}
+
+div[data-baseweb="calendar"],
+div[data-baseweb="calendar"] *,
+div[role="dialog"],
+div[role="dialog"] *,
+div[role="listbox"],
+div[role="listbox"] * {
+    background: rgb(169,169,169) !important;
+    background-color: rgb(169,169,169) !important;
+    color: #F8FAFD !important;
+    border-color: rgba(0,0,0,0.12) !important;
+}
+
+div[data-baseweb="calendar"] button[aria-selected="true"],
+div[data-baseweb="calendar"] button[aria-pressed="true"],
+div[data-baseweb="calendar"] [aria-current="date"],
+div[role="dialog"] [data-baseweb="calendar"] button[aria-selected="true"],
+div[role="dialog"] [data-baseweb="calendar"] button[aria-pressed="true"],
+div[role="dialog"] [data-baseweb="calendar"] [aria-current="date"],
+div[role="dialog"] button[aria-selected="true"],
+div[role="dialog"] button[aria-pressed="true"],
+div[role="dialog"] [aria-current="date"] {
+    background: #F28C18 !important;
+    background-color: #F28C18 !important;
+    color: #171717 !important;
+    border-color: #F28C18 !important;
+}
