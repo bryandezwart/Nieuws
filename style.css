@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6, p, label, span, div, li { color: var(--rm-text); }
     font-weight: 700;
     color: var(--rm-text);
     border: 1px solid var(--rm-border);
-    background: rgba(255,255,255,0.04);
+    background: rgba(169,169,169,0.04);
     border-radius: 999px;
     white-space: nowrap;
 }
