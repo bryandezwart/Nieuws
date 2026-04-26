@@ -733,6 +733,9 @@ def app():
     with tab2:
         news_tab()
 
+    st.markdown("## Start lokaal")
+    st.code("streamlit run app.py", language="bash")
+
 
 if __name__ == "__main__":
     app()
