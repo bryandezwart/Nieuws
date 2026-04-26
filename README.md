@@ -47,15 +47,3 @@ streamlit run app.py
 ## Opmerking
 
 De nieuwsfilter voor "radio-proof" werkt met eenvoudige trefwoorden. Daardoor kan een item soms te streng of te los worden gefilterd. Je kunt die woorden later makkelijk aanpassen in `NEWS_EXCLUDE_TERMS` en `NEWS_PREFER_TERMS`.
-
-
-## Belangrijk
-Deze versie is **zonder verborgen `.streamlit`-map** verpakt.
-De styling en huisstijl zitten al in `app.py`.
-
-Upload dus alleen deze zichtbare bestanden:
-- `app.py`
-- `requirements.txt`
-- `README.md`
-- `radio_muziekstad_logo.png`
-
