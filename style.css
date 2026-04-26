@@ -102,7 +102,7 @@ button[role="tab"] {
 button[role="tab"][aria-selected="true"] {
     background: linear-gradient(180deg, var(--rm-orange-soft) 0%, var(--rm-orange) 48%, var(--rm-orange-dark) 100%) !important;
     color: #181818 !important;
-    border-color: rgba(255,255,255,0.16) !important;
+    border-color: rgba(169,169,169,0.16) !important;
     box-shadow: 0 10px 24px rgba(242, 140, 24, 0.22) !important;
 }
 
