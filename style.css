@@ -256,7 +256,7 @@ div[role="dialog"] button[aria-selected="true"],
 div[role="dialog"] button[aria-pressed="true"],
 div[role="dialog"] [aria-current="date"] {
     background: var(--rm-orange) !important;
-    color: #171717 !important;
+    color: #248,250,253 !important;
     border-color: var(--rm-orange) !important;
     box-shadow: 0 0 0 1px rgba(242,140,24,0.20) !important;
 }
