@@ -15,7 +15,7 @@ import streamlit as st
 from bs4 import BeautifulSoup, NavigableString, Tag
 
 st.set_page_config(
-    page_title="Radio Dashboard",
+    page_title="Radio Nieuws Dashboard",
     page_icon="🎙️",
     layout="wide",
 )
